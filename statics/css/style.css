@@ -4,9 +4,10 @@
     src: url('../fonts/Vazir.woff') format('woff');
 }
 
-body {
+* {
     font-family: vazir;
 }
+
 :root {
     --primary: #09b84c;
     --secondary: #FB9F38;
