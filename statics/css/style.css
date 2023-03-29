@@ -1,0 +1,356 @@
+/********** Template CSS **********/
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Vazir.woff') format('woff');
+}
+
+body {
+    font-family: vazir;
+}
+:root {
+    --primary: #09b84c;
+    --secondary: #FB9F38;
+    --light: #0394c0;
+    --dark: #067062;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+}
+
+.fw-medium {
+    font-weight: 600;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    transition: .5s;
+    font-weight: 500;
+}
+
+.btn-primary,
+.btn-outline-primary:hover {
+    color: var(--light);
+}
+
+.btn-secondary,
+.btn-outline-secondary:hover {
+    color: var(--dark);
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+
+/*** Navbar ***/
+.sticky-top {
+    top: -150px;
+    transition: .5s;
+}
+
+.navbar .navbar-brand {
+    position: fixed;
+    padding: 0;
+    width: 100px;
+    height: 90px;
+    top: 0;
+    left: 0;
+    background-color: rgb(2, 134, 95);
+    border-radius: 0px 0px 100px 100px;
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-left: 50px;
+    padding: 5px;
+    color: var(--dark);
+    font-weight: 600;
+    outline: none;
+    font-size: 20px;
+}
+
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+#navbar{
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 0px 20px 20px;
+}
+@media (max-width: 991.98px) {
+    .navbar .navbar-brand {
+        width: 126px;
+        height: 100px;
+    }
+
+    .navbar .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        margin-top: 75px;
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Header ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background: rgba(15, 102, 7, 0.7);
+    z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 3.5rem;
+    background-color: var(--dark);
+    border: 15px solid var(--dark);
+}
+#welcome p{
+    color: wheat;
+    font-size: 50px;
+}
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*** Section Title ***/
+.section-title {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--primary);
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    bottom: -13px;
+    left: calc(25% - 13px);
+    background: var(--dark);
+    border: 10px solid #ffffff;
+    border-radius: 28px;
+}
+
+.section-title.text-center::before {
+    left: 25%;
+}
+
+.section-title.text-center::after {
+    left: calc(50% - 13px);
+}
+
+
+/*** Products ***/
+.product {
+    background: linear-gradient(rgba(136, 180, 78, .1), rgba(136, 180, 78, .1)), url(../img/product-bg.png) left bottom no-repeat;
+    background-size: auto;
+}
+
+.product-carousel .owl-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.product-carousel .owl-nav .owl-prev,
+.product-carousel .owl-nav .owl-next {
+    margin: 0 10px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: var(--primary);
+    border-radius: 55px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .15);
+    font-size: 25px;
+    transition: .5s;
+}
+
+.product-carousel .owl-nav .owl-prev:hover,
+.product-carousel .owl-nav .owl-next:hover {
+    background: #ffffff;
+    color: var(--primary);
+}
+
+/*** Contact ***/
+.contact .btn-square {
+    width: 100px;
+    height: 100px;
+    border: 20px solid var(--light);
+    background: var(--primary);
+    border-radius: 50px;
+}
+
+
+/*** Testimonial ***/
+.testimonial {
+    background: linear-gradient(rgba(136, 180, 78, .85), rgba(136, 180, 78, .85)), url(../img/testimonial-bg.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.testimonial-item {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+    background: #ffffff;
+    border: 30px solid var(--primary);
+}
+
+.testimonial-item img {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 60px;
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 35px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: var(--primary);
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    width: 30px;
+    background: var(--dark);
+}
+
+
+/*** Footer ***/
+.footer {
+    color: #ffffff;
+    font-size: 20px;
+    border-color: #09b84c;
+}
+#footer_start{
+    border-radius: 20px 20px 0px 0px;
+}
+#footer_facebook{
+    color: blue;
+    background-color: white;
+}
+#footer_whatsapp{
+    color: white;
+    background-color: green;
+}
+#BackToTop{
+    color: #ffffff;
+    background-color: #0394c0;
+}
