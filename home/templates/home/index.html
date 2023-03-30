@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Tamir</title>
+    <title>Tavana</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -41,149 +41,28 @@
 
     
     <!-- Navbar Start -->
-    <div class="container-fluid sticky-top" dir="rtl" id="navbar">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light py-2 py-lg-0">
-                <a href="/" class="navbar-brand">
-                    <img class="img-fluid" src="{% static 'img/logo.png' %}" alt="Logo">
-                </a>
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="#" class="nav-item nav-link">صفحه اصلی</a>
-                        <a href="#about" class="nav-item nav-link">درباره</a>
-                        <a href="#help" class="nav-item nav-link">کمک های خییرین</a>
-                        <a href="#details" class="nav-item nav-link">جزئیات کمک ها</a>
-                        <a href="#pictures" class="nav-item nav-link">تصاویر</a>
-                        <a href="#contact" class="nav-item nav-link">تماس با ما</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
+    {% include 'includes/navbar.html' %}
     <!-- Navbar End -->
 
 
     <!-- Carousel Start -->
-    <div class="container-fluid px-0 mb-5">
-        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner" id="welcome">
-                <div class="carousel-item active">
-                    <img class="w-100" src="{% static 'img/carousel-1.jpg' %}" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 text-center">
-                                    <p class="animated zoomIn">به تعمیر خوش آمدید</p>                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="{% static 'img/carousel-2.jpg' %}" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 text-center">
-                                    <p class="animated zoomIn">به تعمیر خوش آمدید</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
+    {% include 'includes/carousel.html' %}
     <!-- Carousel End -->
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5" dir="rtl" id="about">
-        <div class="container">
-            <div class="col 8">
-                <h1>درباره</h1>
-                <p>شرح موضوع</p>
-            </div>
-            <div class="col 4">
-                <img src="{% static 'img/product-4.jpg' %}" alt="">
-            </div>
-        </div>
-    </div>
+    {% include 'includes/about.html' %}
     <!-- About End -->
 
 
-    <!-- Products Start -->
-    <div class="container-fluid product py-5 my-5" id="help">
-        <div class="container py-5">
-            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6">کمک های خییرین</h1>
-                <p class="fs-5 fw-medium fst-italic text-primary">جزئیات</p>
-            </div>
-            <div class="owl-carousel product-carousel wow fadeInUp" data-wow-delay="0.5s">
-                <a href="" class="d-block product-item rounded">
-                    <img src="{% static 'img/product-1.jpg' %}" alt="">
-                    <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
-                        <h4 class="text-primary">شخص کمک کننده</h4>
-                        <span class="text-body">مقدار کمک</span>
-                    </div>
-                </a>
-                <a href="" class="d-block product-item rounded">
-                    <img src="{% static 'img/product-2.jpg' %}" alt="">
-                    <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
-                        <h4 class="text-primary">شخص کمک کننده</h4>
-                        <span class="text-body">مقدار کمک</span>
-                    </div>
-                </a>
-                <a href="" class="d-block product-item rounded">
-                    <img src="{% static 'img/product-3.jpg' %}" alt="">
-                    <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
-                        <h4 class="text-primary">شخص کمک کننده</h4>
-                        <span class="text-body">مقدار کمک</span>
-                    </div>
-                </a>
-                <a href="" class="d-block product-item rounded">
-                    <img src="{% static 'img/product-4.jpg' %}" alt="">
-                    <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
-                        <h4 class="text-primary">شخص کمک کننده</h4>
-                        <span class="text-body">مقدار کمک</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Products End -->
+    <!-- Products Start (Charitable donations) -->
+    {% include 'includes/donation.html' %}
+    <!-- Products End (End Charitable donations) -->
 
 
-    <!-- Article Start -->
-    <div class="container-xxl py-5" dir="rtl" id="details">
-        <div class="container">
-            <div class="row g-5">
-                <!-- <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                    <img class="img-fluid" src="img/article.jpg" alt="">
-                </div> -->
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="section-title text-center mx-auto wow fadeInUp">
-                        <h1 class="display-6">جزئیات کمک ها</h1>
-                    </div>
-                    <p class="mb-4">شرح کمک ها</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Article End -->
+    <!-- Article Start (Details of Charitable donations) -->
+    {% include 'includes/details_donations.html' %}
+    <!-- Article End (End Details of Charitable donations) -->
 
 
     <!-- Video Start -->
@@ -196,117 +75,23 @@
     <!-- Video Modal End -->
 
 
-    <!-- Store Start -->
-    <div class="container-xxl py-5" id="pictures">
-        <div class="container">
-            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6">تصاویر</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="store-item position-relative text-center">
-                        <img class="img-fluid" src="{% static 'img/store-product-1.jpg' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="store-item position-relative text-center">
-                        <img class="img-fluid" src="{% static 'img/store-product-2.jpg' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="store-item position-relative text-center">
-                        <img class="img-fluid" src="{% static 'img/store-product-3.jpg' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Store End -->
+    <!-- Store Start (Pictures Start) -->
+    {% include 'includes/pictures.html' %}
+    <!-- Store End (End Pictures Start) -->
 
 
-    <!-- Testimonial Start -->
-    <div class="container-fluid testimonial py-5 my-5">
-        <div class="container py-5">
-            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6">جزئیات مصارف</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.5s">
-                <div class="testimonial-item p-4 p-lg-5">
-                    <h1 class="mb-4">بودجه موجود</h1>
-                    <h1 class="mb-4">مقدار ۲۰۰۰۰۰</h1>
-                </div>
-                <div class="testimonial-item p-4 p-lg-5">
-                    <h1 class="mb-4">بودجه مصرف شده</ا>
-                    <h1 class="mb-4">مقدر ۴۰۰۰۰۰</ا>
-                </div>
-                <div class="testimonial-item p-4 p-lg-5">
-                    <h1 class="mb-4">بودجه مورد نیاز</ا>
-                    <h1 class="mb-4">مقدر ۶۰۰۰۰۰</ا>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
+    <!-- Testimonial Start (Details of expenses Start) -->
+    {% include 'includes/expenses.html' %}
+    <!-- Testimonial End (End Details of expenses) -->
 
 
     <!-- Contact Start -->
-    <div class="container-xxl contact py-5" dir="rtl" id="contact">
-        <div class="container">
-            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6">با ما به تماس شوید</h1>
-            </div>
-            <div class="row justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-8">
-                    <p class="text-center mb-5">در جهت ساخت تعمیر ما را کمک کنید</p>
-                    <div class="row g-5">
-                        <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="btn-square mx-auto mb-3">
-                                <i class="fa fa-envelope fa-2x text-white"></i>
-                            </div>
-                            <p class="mb-2">ایمیل</p>
-                            <p class="mb-0">support@example.com</p>
-                        </div>
-                        <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="btn-square mx-auto mb-3">
-                                <i class="fa fa-phone fa-2x text-white"></i>
-                            </div>
-                            <p class="mb-2">شماره تماس</p>
-                            <p class="mb-0">۰۷۹۰۰۰۰۰۰۰۰</p>
-                        </div>
-                        <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="btn-square mx-auto mb-3">
-                                <i class="fa fa-map-marker-alt fa-2x text-white"></i>
-                            </div>
-                            <p class="mb-2">آدرس</p>
-                            <p class="mb-0">بهسود-میدان وردک</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include 'includes/contact.html' %}
     <!-- Contact Start -->
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s" dir="rtl" id="footer_start">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-primary mb-4">آدرس ما</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i> بهسود-میدان وردک</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i> ۰۷۹۰۰۰۰۰۰۰۰</p>
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i> info@example.com</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-success rounded-circle me-2"  href="" id="footer_whatsapp"><i class="fab fa-whatsapp"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href="" id="footer_facebook"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include 'includes/footer.html' %}
     <!-- Footer End -->
 
 
