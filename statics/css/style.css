@@ -245,6 +245,16 @@
     left: calc(50% - 13px);
 }
 
+/* about */
+#about{
+    display: block;
+    justify-content: right;
+}
+#about_image{
+    width: 320px;
+    height: 200px;
+}
+
 
 /*** Products ***/
 .product {
