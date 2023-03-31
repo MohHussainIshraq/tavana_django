@@ -5,21 +5,13 @@
             <h1 class="display-6">تصاویر</h1>
         </div>
         <div class="row g-4">
+            {% for i in pictures %}
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="store-item position-relative text-center">
-                    <img class="img-fluid" src="{% static 'img/store-product-1.jpg' %}" alt="">
+                    <img class="img-fluid" src="{{ i.image.url }}" alt="">
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="store-item position-relative text-center">
-                    <img class="img-fluid" src="{% static 'img/store-product-2.jpg' %}" alt="">
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="store-item position-relative text-center">
-                    <img class="img-fluid" src="{% static 'img/store-product-3.jpg' %}" alt="">
-                </div>
-            </div>
+            {% endfor %}
             <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
             </div>
         </div>

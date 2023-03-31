@@ -38,3 +38,26 @@ class Helpers(models.Model):
     class Meta:
         verbose_name = 'کمک کننده'
         verbose_name_plural = 'کمک کننده ها'
+
+
+class Details_Donations(models.Model):
+    title = models.CharField(max_length=50, verbose_name = 'عنوان')
+    description = models.TextField(verbose_name='توضیحات بیشتر')
+
+    def __str__(self):
+        return self.title
+    
+
+    class Meta:
+        verbose_name = 'جزئیات کمک'
+        verbose_name_plural = 'جزئیات کمک ها'
+
+
+class Pictures(models.Model):
+    image = models.ImageField(upload_to='pictures', verbose_name='تصویر')
+
+
+    class Meta:
+        verbose_name = 'تصویر'
+        verbose_name_plural = 'تصاویر'
+
