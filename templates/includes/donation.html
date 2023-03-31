@@ -2,38 +2,19 @@
 <div class="container-fluid product py-5 my-5" id="help">
     <div class="container py-5">
         <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <h1 class="display-6">کمک های خیریه</h1>
-            <p class="fs-5 fw-medium fst-italic text-primary">جزئیات</p>
+            <h6 class="display-5 text-center text-bg-success">{{ donation_title.title }}</h6>
+            <p class="fs-5 fw-medium text-center ">{{ donation_title.description }}</p>
         </div>
         <div class="owl-carousel product-carousel wow fadeInUp" data-wow-delay="0.5s">
-            <a href="" class="d-block product-item rounded">
-                <img src="{% static 'img/product-1.jpg' %}" alt="">
-                <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
-                    <h4 class="text-primary">شخص کمک کننده</h4>
-                    <span class="text-body">مقدار کمک</span>
+            {% for help in helpers %}
+            <div href="" class="d-block product-item rounded">
+                <img src="{{ help.image.url }}" alt="">
+                <div class="bg-gradient shadow-sm text-center p-4 position-relative mt-n5 mx-4">
+                    <h3 class="text-bg-success">{{ help.name }}</h3>
+                    <span class="text-white text-bg-primary">{{ help.count }}</span>
                 </div>
-            </a>
-            <a href="" class="d-block product-item rounded">
-                <img src="{% static 'img/product-2.jpg' %}" alt="">
-                <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
-                    <h4 class="text-primary">شخص کمک کننده</h4>
-                    <span class="text-body">مقدار کمک</span>
-                </div>
-            </a>
-            <a href="" class="d-block product-item rounded">
-                <img src="{% static 'img/product-3.jpg' %}" alt="">
-                <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
-                    <h4 class="text-primary">شخص کمک کننده</h4>
-                    <span class="text-body">مقدار کمک</span>
-                </div>
-            </a>
-            <a href="" class="d-block product-item rounded">
-                <img src="{% static 'img/product-4.jpg' %}" alt="">
-                <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
-                    <h4 class="text-primary">شخص کمک کننده</h4>
-                    <span class="text-body">مقدار کمک</span>
-                </div>
-            </a>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </div>

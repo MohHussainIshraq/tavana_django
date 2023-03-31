@@ -5,8 +5,26 @@
 }
 
 * {
+    font-size: 100%;
     font-family: vazir;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: vazir;
+}
+
+/* @font-face {
+    font-family: 'BYekan';
+    src: url('../fonts/BYekan/BYekan-webfont.ttf') format('woff');
+}
+
+*{
+    font-family: "BYekan";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "BYekan";
+}  */
 
 :root {
     --primary: #09b84c;
