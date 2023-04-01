@@ -3,7 +3,7 @@
     <div class="container py-5">
         <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <h6 class="display-5 text-center text-bg-success">{{ donation_title.title }}</h6>
-            <p class="form-select-lg fw-medium text-lg-end ">{{ donation_title.description }}</p>
+            <p style="text-align: justify; direction: rtl; "class=form-select-lg fw-medium text-lg-first ">{{ donation_title.description }}</p>
         </div>
         <div class="owl-carousel product-carousel wow fadeInUp" data-wow-delay="0.5s">
             {% for help in helpers %}

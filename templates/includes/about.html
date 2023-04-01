@@ -1,9 +1,9 @@
 {% load static %}
-<div class="container-xxl py-5" dir="rtl">
+<div class="container-xxl py-5" dir="rtl" id="about">
     <div class="container">
-        <div class="col 8 fs-5 fw-black text-lg-end"  id="about">
+        <div class="form-select-lg">
             <h3>{{ about.title }}</h3>
-            <p>{{ about.description }}</p>
+            <p style="text-align: justify;">{{ about.description }}</p>
         </div>
         <div class="text-center">
             <img src="{{ about.image.url }}" alt="" id="about_image">

@@ -1,22 +1,16 @@
 {% load static %}
 <div class="container-fluid testimonial py-5 my-5">
-    <div class="container py-5">
+    <div class="container py-5" id="expenses">
         <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <h1 class="display-6">جزئیات مصارف</h1>
+            <h1 class="display-6">{{ title_expenses.title }}</h1>
         </div>
         <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.5s">
+            {% for expens in expenses %}
             <div class="testimonial-item p-4 p-lg-5">
-                <h1 class="mb-4">بودجه موجود</h1>
-                <h1 class="mb-4">مقدار ۲۰۰۰۰۰</h1>
+                <h3 class="mb-4">{{ expens.title }}</h3>
+                <h3 class="mb-4">{{ expens.count }}</h3>
             </div>
-            <div class="testimonial-item p-4 p-lg-5">
-                <h1 class="mb-4">بودجه مصرف شده</ا>
-                <h1 class="mb-4">مقدار ۴۰۰۰۰۰</ا>
-            </div>
-            <div class="testimonial-item p-4 p-lg-5">
-                <h1 class="mb-4">بودجه مورد نیاز</ا>
-                <h1 class="mb-4">مقدار ۶۰۰۰۰۰</ا>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
