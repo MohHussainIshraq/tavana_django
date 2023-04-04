@@ -374,6 +374,7 @@ h1, h2, h3, h4, h5, h6 {
 #footer_facebook{
     color: blue;
     background-color: white;
+    
 }
 #footer_whatsapp{
     color: white;
@@ -382,4 +383,10 @@ h1, h2, h3, h4, h5, h6 {
 #BackToTop{
     color: #ffffff;
     background-color: #0394c0;
+}
+.footer_icon i{
+    padding: 10px;
+}
+.social_icon{
+    justify-content: space-evenly;
 }
